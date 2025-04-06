@@ -1,7 +1,7 @@
 // src/main.jsx
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import App from "./App.jsx";
 import Layout from "./routes/Layout.jsx";
 import DetailView from "./routes/DetailView";
@@ -10,7 +10,7 @@ import "./index.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index={true} element={<App />} />
@@ -18,6 +18,6 @@ createRoot(document.getElementById("root")).render(
           <Route path="*" element={<NotFound />} /> {/*Catch-all route */}
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );
