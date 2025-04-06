@@ -48,8 +48,6 @@ function App() {
       
       <div className="whole-page">
         <h1>My Crypto List</h1>
-        <h2>Alejandro Munoz | Florida Atlantic University | Z23619059</h2>
-
         <input
           type="text"
           placeholder="Search..."
